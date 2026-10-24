@@ -1,0 +1,4 @@
+shadow prebuilt repo: apache-http (target)
+  upstream: external/apache-http
+  api-level: 34 (branch 34-20261024)
+  date: 2026-10-24

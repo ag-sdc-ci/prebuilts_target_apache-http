@@ -1,0 +1,51 @@
+// Auto-generated prebuilt Blueprint for prebuilts_target_apache-http
+package {
+    default_applicable_licenses: ["external_apache-http_license"],
+}
+
+license {
+    name: "external_apache-http_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-Apache-2.0",
+    ],
+    license_text: [
+        "NOTICE",
+    ],
+}
+
+java_import {
+    name: "org.apache.http.legacy",
+    jars: ["share/apache-http/org.apache.http.legacy.jar"],
+    host_supported: true,
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+}
+
+java_import {
+    name: "org.apache.http.legacy.stubs",
+    jars: ["share/apache-http/org.apache.http.legacy.jar"],
+    host_supported: true,
+}
+
+java_import {
+    name: "org.apache.http.legacy.stubs.system",
+    jars: ["share/apache-http/org.apache.http.legacy.jar"],
+    host_supported: true,
+}
+
+filegroup {
+    name: "apache-http-legacy-current.txt",
+    srcs: [
+        "api/current.txt",
+    ],
+}
+
+filegroup {
+    name: "apache-http-legacy-system-current.txt",
+    srcs: [
+        "api/system-current.txt",
+    ],
+}
